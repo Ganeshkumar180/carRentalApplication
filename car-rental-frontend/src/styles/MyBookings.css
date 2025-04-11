@@ -1,0 +1,39 @@
+.my-bookings {
+    max-width: 900px;
+    margin: auto;
+    padding: 20px;
+  }
+  
+  .booking-list {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .booking-card {
+    display: flex;
+    gap: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    background: #fff;
+  }
+  
+  .booking-card img {
+    width: 120px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+  
+  .booking-card h3 {
+    margin: 0;
+  }
+  
+  .loading {
+    text-align: center;
+    font-size: 18px;
+    margin-top: 50px;
+  }
+  

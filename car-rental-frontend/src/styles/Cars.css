@@ -1,0 +1,66 @@
+.cars-page {
+    padding: 2rem;
+  }
+  
+  .filters {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    flex-wrap: wrap;
+  }
+  
+  .filters input, .filters select {
+    padding: 0.5rem;
+    font-size: 1rem;
+  }
+  
+  .car-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+  }
+  
+  .car-card {
+    background: white;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 0 8px rgba(0,0,0,0.1);
+    text-align: center;
+  }
+  
+  .car-card img {
+    max-width: 100%;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 6px;
+  }
+  
+  .book-btn {
+    display: inline-block;
+    margin-top: 0.5rem;
+    padding: 0.5rem 1rem;
+    background: #0077ff;
+    color: white;
+    border-radius: 6px;
+    text-decoration: none;
+  }
+  
+  .pagination {
+    margin-top: 2rem;
+    text-align: center;
+  }
+  
+  .pagination button {
+    margin: 0 5px;
+    padding: 0.4rem 0.8rem;
+    border: none;
+    background: #ddd;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .pagination .active {
+    background: #0077ff;
+    color: white;
+  }
+  

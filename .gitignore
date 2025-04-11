@@ -1,0 +1,21 @@
+# Node modules
+car-rental-backend/node_modules/
+car-rental-frontend/node_modules/
+
+# Logs
+*.log
+
+# Environment variables
+*.env
+
+# Build output
+car-rental-frontend/dist/
+car-rental-backend/build/
+
+# IDE/editor folders
+.vscode/
+.idea/
+
+# OS files
+.DS_Store
+Thumbs.db

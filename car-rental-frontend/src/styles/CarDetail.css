@@ -1,0 +1,25 @@
+.car-detail-container {
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
+  }
+  
+  .car-image {
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+  }
+  
+  .date-picker {
+    margin-bottom: 10px;
+  }
+  
+  button {
+    padding: 10px 20px;
+    background: #0077cc;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
