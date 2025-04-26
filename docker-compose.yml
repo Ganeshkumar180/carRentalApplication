@@ -5,9 +5,8 @@ services:
     container_name: mern-backend
     ports:
       - "5000:5000"
-    environment:
-      -  MONGO_URI=mongodb+srv://test:test@cluster0.5l0uuis.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
-      - JWT_SECRET=fb4ac817829ccb506d906f6d5a2c0936b71007c250e548ac50be278cc0223b66f8f865a72d2a3bb6c7d8c3364bf0de6462c00c5e0e6b933d1bc68d71b48b6e58
+    env_file:
+      - .env
     
     networks:
       - mern-network
