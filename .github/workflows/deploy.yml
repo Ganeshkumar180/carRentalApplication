@@ -27,6 +27,7 @@ jobs:
           echo "PORT=${{ secrets.PORT }}" >> .env
           echo "MONGO_URI=${{ secrets.MONGO_URI }}" >> .env
           echo "JWT_SECRET=${{ secrets.JWT_SECRET }}" >> .env
+          # Add other secrets if needed
 
       - name: Build and run Docker Compose
         run: |
@@ -36,13 +37,13 @@ jobs:
         run: |
           docker ps
 
-      - name: Test if the web app is running
+      - name: Test if the frontend is running
         run: |
-          curl http://localhost:8000  # Adjust port as necessary
+          curl http://localhost:8000  # Frontend is expected to run on port 8000
 
-      - name: Test health check endpoint
+      - name: Test backend health check
         run: |
-          curl http://localhost:8000/api/health  # Replace with actual health endpoint
+          curl http://localhost:5000/api/health  # Backend health check endpoint on port 5000
 
       - name: Cleanup - Remove .env for security
         run: |
