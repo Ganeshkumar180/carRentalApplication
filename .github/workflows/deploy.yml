@@ -13,11 +13,21 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
 
-      - name: Install Docker
+      - name: Install Docker and Docker Compose
         run: |
           curl -fsSL https://get.docker.com | sh
           sudo systemctl start docker
           sudo systemctl enable docker
+          sudo apt-get update
+          sudo apt-get install docker-compose-plugin -y
+
+      - name: Create .env file from GitHub Secrets
+        run: |
+          touch .env
+          echo "PORT=${{ secrets.PORT }}" >> .env
+          echo "MONGO_URI=${{ secrets.MONGO_URI }}" >> .env
+          echo "JWT_SECRET=${{ secrets.JWT_SECRET }}" >> .env
+          # Add other environment variables here if needed
 
       - name: Build and run Docker Compose
         run: |
@@ -26,3 +36,7 @@ jobs:
       - name: Check running containers
         run: |
           docker ps
+
+      - name: Cleanup - Remove .env for security
+        run: |
+          rm -f .env
